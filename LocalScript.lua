@@ -8,10 +8,8 @@ local targetUserId = 7698202440
 local function checkPlayers()
     for _, player in ipairs(Players:GetPlayers()) do
         if player.UserId == targetUserId then
-            -- Gửi tín hiệu đến server
             NotifyPlayerJoined:FireServer(targetUserId)
             
-            -- Tự động rời trò chơi
             game.Players.LocalPlayer:Kick("Người dùng được chỉ định đã tham gia. Tự động rời khỏi server.")
             break
         end
