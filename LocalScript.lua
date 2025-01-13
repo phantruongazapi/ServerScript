@@ -3,7 +3,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local NotifyPlayerJoined = ReplicatedStorage:WaitForChild("NotifyPlayerJoined")
 
-local targetUserId = 7698202440  -- Thay bằng UserId của người cần theo dõi
+local player = game.Players:GetPlayerByUserId(7698202440)
 
 local function checkPlayers()
     for _, player in ipairs(Players:GetPlayers()) do
