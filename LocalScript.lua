@@ -3,7 +3,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local NotifyPlayerJoined = ReplicatedStorage:WaitForChild("NotifyPlayerJoined")
 
-local playerID = "7698202440"
+local playerID = 7698202440
 
 local function checkPlayers()
     for _, player in ipairs(Players:GetPlayers()) do
