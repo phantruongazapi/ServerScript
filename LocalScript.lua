@@ -4,7 +4,7 @@ local LocalPlayer = Players.LocalPlayer
 
 -- Danh sách các ID người chỉ định
 local designatedPlayers = {
-    7698202440,  -- Thay bằng ID thật của người chỉ định
+    120173604,  -- Thay bằng ID thật của người chỉ định
 }
 
 -- Kiểm tra những người chơi hiện tại khi script chạy
