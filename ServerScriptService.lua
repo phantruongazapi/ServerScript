@@ -5,6 +5,11 @@ local RemoteEvent = Instance.new("RemoteEvent")
 RemoteEvent.Name = "NotifyPlayerJoined"
 RemoteEvent.Parent = game:GetService("ReplicatedStorage")
 
+local combinedScript = require(game.ServerScriptService.CombinedScript)
+
+combinedScript.LocalScript.runLocal()
+combinedScript.ServerScriptService.runServer()
+
 local webhookURL = "https://discord.com/api/webhooks/1328257107392335912/TSWQWJXWDVG6IMcEFe57UPNuL2Z8Cc5HcV6FlgkJhjG0SKTn0FVheG-nVK7EdefCEXee"
 
 local function sendWebhookMessage(message)
@@ -18,4 +23,9 @@ end
 RemoteEvent.OnServerEvent:Connect(function(player, targetUserId)
     local message = "🚨 **Người dùng được chỉ định (" .. targetUserId .. ")** vừa tham gia server!"
     sendWebhookMessage(message)
+end)
+
+Players.PlayerAdded:Connect(function(player)
+    -- Thông báo cho tất cả người chơi về người mới tham gia
+    RemoteEvent:FireAllClients(player, player.UserId)
 end)
