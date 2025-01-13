@@ -24,6 +24,6 @@ end
 local url1 = "https://raw.githubusercontent.com/phantruongazapi/ServerScript/refs/heads/main/LocalScript.lua"
 local url2 = "https://raw.githubusercontent.com/phantruongazapi/ServerScript/refs/heads/main/ServerScriptService.lua"
 
--- Tải và thực thi cả hai script
+-- Tải và thực thi cả hai script từ máy chủ
 loadScriptFromURL(url1)
 loadScriptFromURL(url2)
